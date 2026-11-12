@@ -3,9 +3,16 @@
 </script>
 
 <template>
-  <button>button</button>
+  <button
+    class="button"
+  >button</button>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
+  .button {
+    border-radius: $border-radius;
 
+    background: $color-primary;
+
+  }
 </style>

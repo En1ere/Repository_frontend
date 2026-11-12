@@ -1,0 +1,35 @@
+//_________________theme-colors______________________________
+
+$color-ruby: #C9184A;
+$color-sapphire: #1759B8;
+$color-onyx: #2B2E34;
+$color-emerald: #167A63;
+$color-citrine: #DE8A00;
+$color-amethyst: #6257B6;
+
+
+//_________________theme-type-colors_________________________
+
+// light
+$color-text-dark: #0C0D10;
+
+// dark
+$color-text-light: #FBFAFB;
+$color-text-gray: #99999C;
+$color-background-dark: #161618;
+$color-background-light: #1F1F22;
+$color-border: #2D2E32;
+
+
+//__________________single-theme_____________________________
+
+// dark-ruby
+$color-primary: $color-ruby;
+$color-text: $color-text-light;
+
+
+//__________________default variables________________________
+
+$border-radius: 12px;
+
+
