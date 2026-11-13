@@ -1,10 +1,10 @@
 <script setup lang="ts">
-import type {SizeTypes} from "@/shared/types/sizeTypes.ts";
+import type {StyleSize} from "@/shared/types/styleSize.ts";
 import {computed} from "vue";
 
 interface InputProps {
   label?: string
-  size?: SizeTypes
+  size?: StyleSize
   disabled?: boolean
 }
 const props = withDefaults(defineProps<InputProps>(), {
