@@ -6,15 +6,16 @@ type FillType = 'primary' | 'outline' | 'destructive' | 'empty';
 type ContentType = 'text' | 'icon';
 
 interface ButtonProps {
-  size: ButtonSizeType,
-  fillType: FillType,
-  contentType: ContentType,
-  disabled: boolean
+  size?: ButtonSizeType,
+  fillType?: FillType,
+  contentType?: ContentType,
+  disabled?: boolean
 }
 const props = withDefaults(defineProps<ButtonProps>(), {
   size: 'm',
   fillType: 'primary',
-  contentType: 'text'
+  contentType: 'text',
+  disabled: false,
 })
 
 const normalizeClasses = computed(() => {
@@ -40,6 +41,8 @@ const normalizeClasses = computed(() => {
     justify-content: center;
     align-items: center;
     border: 1px solid $color-primary;
+    cursor: pointer;
+    transition: all 0.2s;
   }
 
   .primary {
@@ -47,17 +50,36 @@ const normalizeClasses = computed(() => {
     color: $color-text;
 
     &:hover:not(:disabled) {
-
+      filter: brightness(85%);
+    }
+    &:active:not(:disabled) {
+      filter: brightness(70%);
     }
   }
+
   .outline {
     background: transparent;
     color: $color-primary;
+
+    &:hover:not(:disabled) {
+      box-shadow: 0px 0px 10px 1px $color-primary;
+    }
+    &:active:not(:disabled) {
+      filter: brightness(90%);
+    }
   }
+
   .empty {
-    border: none;
+    border-color: transparent;
     background: transparent;
     color: $color-primary;
+
+    &:hover:not(:disabled) {
+      box-shadow: 0px 0px 10px 1px $color-primary;
+    }
+    &:active:not(:disabled) {
+      filter: brightness(90%);
+    }
   }
 
   .s {
@@ -86,7 +108,7 @@ const normalizeClasses = computed(() => {
   }
 
   .button:disabled {
-    opacity: 0.7;
+    opacity: 0.6;
     cursor: default;
     pointer-events: none;
   }

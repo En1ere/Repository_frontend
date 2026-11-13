@@ -2,7 +2,19 @@
 @use "font";
 @use "reset";
 
+button, input {
+  &:focus-visible {
+    outline: 1px solid $color-primary;
+    outline-offset: 4px;
+  }
+}
+
 body {
   font-family: 'CheyenneRegular', sans-serif;
   font-size: $font-m;
+  background: $color-background;
+  color: $color-text;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
 }

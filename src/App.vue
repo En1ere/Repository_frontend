@@ -9,7 +9,7 @@ import RButton from "@/shared/ui/RButton.vue";
     <RouterLink to="/">Go to Home</RouterLink>
     <RouterLink to="/about">Go to About</RouterLink>
   </nav>
-  <r-button />
+  <r-button>Aboba</r-button>
   <main>
     <RouterView />
   </main>
