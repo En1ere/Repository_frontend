@@ -1,16 +1,14 @@
 <script setup lang="ts">
 import {computed} from "vue";
-
-type ButtonSizeType = 's' | 'm' | 'l';
-type FillType = 'primary' | 'outline' | 'destructive' | 'empty';
-type ContentType = 'text' | 'icon';
+import type {ContentTypes, FillTypes, SizeTypes} from "@/shared/types/sizeTypes.ts";
 
 interface ButtonProps {
-  size?: ButtonSizeType,
-  fillType?: FillType,
-  contentType?: ContentType,
+  size?: SizeTypes,
+  fillType?: FillTypes,
+  contentType?: ContentTypes,
   disabled?: boolean
 }
+
 const props = withDefaults(defineProps<ButtonProps>(), {
   size: 'm',
   fillType: 'primary',
@@ -43,6 +41,11 @@ const normalizeClasses = computed(() => {
     border: 1px solid $color-primary;
     cursor: pointer;
     transition: all 0.2s;
+
+    &:focus-visible {
+      outline: 1px solid $color-primary !important;
+      outline-offset: 4px;
+    }
   }
 
   .primary {
@@ -75,7 +78,7 @@ const normalizeClasses = computed(() => {
     color: $color-primary;
 
     &:hover:not(:disabled) {
-      box-shadow: 0px 0px 10px 1px $color-primary;
+      text-decoration: underline;
     }
     &:active:not(:disabled) {
       filter: brightness(90%);
@@ -83,24 +86,27 @@ const normalizeClasses = computed(() => {
   }
 
   .s {
+    height: 30px;
     &.text {
-      padding: 4px 8px;
+      padding: 0 8px;
     }
     &.icon {
       padding: 4px;
     }
   }
   .m {
+    height: 36px;
     &.text {
-      padding: 8px 16px;
+      padding: 0 16px;
     }
     &.icon {
       padding: 8px;
     }
   }
   .l {
+    height: 42px;
     &.text {
-      padding: 16px 24px;
+      padding: 0 24px;
     }
     &.icon {
       padding: 16px;
