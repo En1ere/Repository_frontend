@@ -5,6 +5,7 @@ import {ref} from "vue";
 import RSwitcher from "@/shared/ui/RSwitcher.vue";
 import RCheckbox from "@/shared/ui/RCheckbox.vue";
 import RLogo from "@/shared/ui/RLogo.vue";
+import RIcon from "@/shared/ui/RIcon.vue";
 
 const aboba = ref('');
 const switcher = ref(false);
@@ -29,6 +30,7 @@ const switcher = ref(false);
     <r-input label="huisdaf" v-model="aboba" />
     <r-switcher size="l" label="aboba" v-model="switcher" />
     <r-checkbox label="aboba" v-model="switcher" />
+    <r-icon name="search" variant="warning" :rotate="180" />
   </div>
   <main>
     <RouterView />
