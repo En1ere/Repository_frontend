@@ -66,6 +66,7 @@ const onInput = (event: Event) => {
   background-color: $color-background-input;
   color: $color-text;
 }
+
 .hidden-input {
   position: absolute;
   opacity: 0;

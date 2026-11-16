@@ -18,8 +18,9 @@ const props = withDefaults(defineProps<InputProps>(), {
 
 const emit = defineEmits(['update:modelValue'])
 
-const onClick = () => {
-  emit('update:modelValue', !props.modelValue);
+const onInput = (event: Event) => {
+  const target = event.target as HTMLInputElement;
+  emit('update:modelValue', target.checked)
 }
 
 const normalizeClasses = computed(() => {
@@ -29,24 +30,35 @@ const normalizeClasses = computed(() => {
 </script>
 
 <template>
-  <div class="switcher-wrapper">
-    <button
-      @click="onClick"
-      :class="['switcher', normalizeClasses, {'active': modelValue}]"
+  <label :class="['switcher-wrapper', {'disabled': disabled}]">
+    <input
+      type="checkbox"
+      class="hidden-input"
+      :checked="modelValue"
       :disabled="disabled"
+      @change="onInput"
+    />
+    <span
+      :class="['switcher', normalizeClasses, {'active': modelValue, 'disabled': disabled}]"
+      aria-hidden="true"
     >
       <span :class="['dot', normalizeClasses, {'active': modelValue, 'disabled': disabled}]"/>
-    </button>
-    <label :class="['switcher-label', {'disabled': disabled}]">
+    </span>
+    <span :class="['switcher-label', {'disabled': disabled}]">
       {{ label }}
-    </label>
-  </div>
+    </span>
+  </label>
 </template>
 
 <style scoped lang="scss">
   .switcher-wrapper {
     display: flex;
     align-items: center;
+    cursor: pointer;
+
+    &.disabled {
+      cursor: default;
+    }
   }
 
   .switcher-label {
@@ -82,15 +94,11 @@ const normalizeClasses = computed(() => {
       min-width: 62px;
     }
 
-    &.active {
-      background: $color-primary;
-      border: 1px solid $color-primary;
-    }
-
-    &:disabled {
+    &.disabled {
       cursor: default;
       pointer-events: none;
       border: 1px solid $color-disabled;
+      opacity: 0.7;
     }
   }
 
@@ -130,13 +138,31 @@ const normalizeClasses = computed(() => {
       }
     }
 
+    &.disabled {
+      background: $color-disabled;
+      border: 1px solid $color-disabled;
+    }
     &.active {
       background: $color-text;
       border: 1px solid $color-text;
     }
-    &.disabled {
-      background: $color-disabled;
-      border: 1px solid $color-disabled;
+  }
+
+  .hidden-input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+
+    &:checked + .switcher {
+      background: $color-primary;
+      border: 1px solid $color-primary;
+    }
+
+    &:focus-visible + .checkmark {
+      outline: 2px solid $color-primary;
+      outline-offset: 2px;
     }
   }
 </style>
