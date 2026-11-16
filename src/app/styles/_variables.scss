@@ -11,7 +11,8 @@ $color-amethyst: #6257B6;
 //_________________theme-type-colors_________________________
 
 // light
-$color-text-dark: #0C0D10;
+$light-color-text-dark: #0C0D10;
+$light-color-background-logo: transparent;
 
 // dark
 $dark-color-text-light: #FBFAFB;
@@ -21,6 +22,7 @@ $dark-color-label: #808289;
 $dark-color-disabled: #44464d;
 $dark-color-border: #25262A;
 
+$dark-color-background-logo: $dark-color-text-light;
 $dark-color-background-input: #18181a;
 $dark-color-background-dark: #161618;
 $dark-color-background-light: #19191c;
@@ -39,6 +41,7 @@ $color-text: $color-text-light;
 $color-disabled: $dark-color-disabled;
 $color-border: $dark-color-border;
 
+$color-background-logo: $dark-color-background-logo;
 $color-background-input: $dark-color-background-input;
 $color-background-dark: $dark-color-background-dark;
 $color-background-light: $dark-color-background-light;
@@ -50,3 +53,4 @@ $border-radius: 8px;
 $font-m: 16px;
 $color-error: #c31d1d;
 $color-warning: #cdcd00;
+$color-success: #30a530;

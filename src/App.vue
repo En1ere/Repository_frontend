@@ -4,6 +4,7 @@ import RInput from "@/shared/ui/RInput.vue";
 import {ref} from "vue";
 import RSwitcher from "@/shared/ui/RSwitcher.vue";
 import RCheckbox from "@/shared/ui/RCheckbox.vue";
+import RLogo from "@/shared/ui/RLogo.vue";
 
 const aboba = ref('');
 const switcher = ref(false);
@@ -18,6 +19,7 @@ const switcher = ref(false);
   </nav>
   <div class="test">
 
+    <r-logo />
     <div class="test-btn">
       <r-button fill-type="primary">Aboba</r-button>
       <r-button fill-type="outline">Aboba</r-button>
