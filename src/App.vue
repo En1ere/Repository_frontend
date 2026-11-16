@@ -18,7 +18,12 @@ const switcher = ref(false);
   </nav>
   <div class="test">
 
-    <r-button fill-type="empty">Aboba</r-button>
+    <div class="test-btn">
+      <r-button fill-type="primary">Aboba</r-button>
+      <r-button fill-type="outline">Aboba</r-button>
+      <r-button fill-type="destructive">Aboba</r-button>
+      <r-button fill-type="empty">Aboba</r-button>
+    </div>
     <r-input label="huisdaf" v-model="aboba" />
     <r-switcher size="l" label="aboba" v-model="switcher" />
     <r-checkbox label="aboba" v-model="switcher" />
@@ -40,5 +45,9 @@ h1:first-letter {
   display: flex;
   flex-direction: column;
   gap: 16px;
+}
+.test-btn {
+  display: flex;
+  gap: 8px;
 }
 </style>

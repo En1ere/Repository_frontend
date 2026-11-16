@@ -65,10 +65,23 @@ const normalizeClasses = computed(() => {
     color: $color-primary;
 
     &:hover:not(:disabled) {
-      box-shadow: 0px 0px 10px 1px $color-primary;
+      box-shadow: 0 0 10px 1px $color-primary;
     }
     &:active:not(:disabled) {
       filter: brightness(90%);
+    }
+  }
+
+  .destructive {
+    background: $color-error;
+    border: 1px solid $color-error;
+    color: $color-text;
+
+    &:hover:not(:disabled) {
+      filter: brightness(85%);
+    }
+    &:active:not(:disabled) {
+      filter: brightness(70%);
     }
   }
 
