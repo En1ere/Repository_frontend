@@ -1,21 +1,35 @@
 <script setup lang="ts">
 import type {StyleSize} from "@/shared/types/styleSize.ts";
 import {computed} from "vue";
+import RButton from "@/shared/ui/RButton.vue";
 
 interface InputProps {
   label?: string
   size?: StyleSize
   disabled?: boolean
+  modelValue: string
 }
 const props = withDefaults(defineProps<InputProps>(), {
   label: '',
   size: 'm',
-  disabled: false
+  disabled: false,
+  modelValue: ''
 })
+
+const emit = defineEmits(['update:modelValue'])
+
+const onInput = (event: Event) => {
+  const target = event.target as HTMLInputElement;
+  emit('update:modelValue', target.value || '')
+}
 
 const normalizeClasses = computed(() => {
   return `input-container ${props.size}`
 })
+
+const clearInput = () => {
+  emit('update:modelValue', '')
+}
 
 </script>
 
@@ -23,12 +37,26 @@ const normalizeClasses = computed(() => {
   <div class="input-wrapper">
     <label
       v-if="label"
-      class="input-label"
+      :class="['input-label', {'disabled': disabled}]"
     >
       {{label}}
     </label>
-    <div :class="normalizeClasses">
-      <input class="input" type="text">
+    <div :class="[normalizeClasses, {'disabled': disabled}]">
+      <input
+        class="input"
+        type="text"
+        :value="modelValue"
+        :disabled="disabled"
+        @input="onInput"
+      >
+      <RButton
+        v-if="modelValue.length > 0"
+        class="clear-input-btn"
+        fill-type="empty"
+        @click="clearInput"
+      >
+        x
+      </RButton>
     </div>
   </div>
 </template>
@@ -43,12 +71,16 @@ const normalizeClasses = computed(() => {
     color: $color-label;
     font-size: 0.6rem;
     margin-bottom: 4px;
+
+    &.disabled {
+      color: $color-disabled;
+    }
   }
 
   .input-container {
     position: relative;
     background: $color-background-input;
-    border: 2px solid $color-border;
+    border: 1px solid $color-border;
     border-radius: $border-radius;
     display: flex;
     justify-content: flex-start;
@@ -63,6 +95,10 @@ const normalizeClasses = computed(() => {
     &.l {
       height: 42px;
     }
+
+    &.disabled {
+      border: 1px solid $color-disabled;
+    }
   }
 
   .input {
@@ -71,13 +107,22 @@ const normalizeClasses = computed(() => {
     background: transparent;
     outline: 0;
     color: $color-text;
-    border: 2px solid transparent;
+    border: 1px solid transparent;
     border-radius: 5px;
     padding: 0 12px;
     transition: all 0.2s;
 
     &:focus-visible {
-      outline: 2px solid $color-primary;
+      outline: 1px solid $color-primary;
     }
+
+    &:disabled {
+      pointer-events: none;
+    }
+  }
+
+  .clear-input-btn {
+    position: absolute;
+    right: 0;
   }
 </style>

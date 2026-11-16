@@ -1,6 +1,11 @@
 <script setup lang="ts">
 import RButton from "@/shared/ui/RButton.vue";
 import RInput from "@/shared/ui/RInput.vue";
+import {ref} from "vue";
+import RSwitcher from "@/shared/ui/RSwitcher.vue";
+
+const aboba = ref('');
+const switcher = ref(false);
 </script>
 
 <template>
@@ -13,7 +18,8 @@ import RInput from "@/shared/ui/RInput.vue";
   <div class="test">
 
     <r-button fill-type="empty">Aboba</r-button>
-    <r-input label="huisdaf" />
+    <r-input label="huisdaf" v-model="aboba" />
+    <r-switcher size="l" label="aboba" v-model="switcher" />
   </div>
   <main>
     <RouterView />
