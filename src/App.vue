@@ -3,6 +3,7 @@ import RButton from "@/shared/ui/RButton.vue";
 import RInput from "@/shared/ui/RInput.vue";
 import {ref} from "vue";
 import RSwitcher from "@/shared/ui/RSwitcher.vue";
+import RCheckbox from "@/shared/ui/RCheckbox.vue";
 
 const aboba = ref('');
 const switcher = ref(false);
@@ -20,6 +21,7 @@ const switcher = ref(false);
     <r-button fill-type="empty">Aboba</r-button>
     <r-input label="huisdaf" v-model="aboba" />
     <r-switcher size="l" label="aboba" v-model="switcher" />
+    <r-checkbox label="aboba" v-model="switcher" />
   </div>
   <main>
     <RouterView />
