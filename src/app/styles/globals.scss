@@ -2,6 +2,21 @@
 @use "font";
 @use "reset";
 
+* {
+  &::-webkit-scrollbar {
+    width: 4px;
+    height: 8px;
+  }
+  &::-webkit-scrollbar-track {
+    background: transparent;
+    border-radius: 4px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background: variables.$color-primary;
+    border-radius: 4px;
+  }
+}
+
 body {
   font-family: 'CheyenneRegular', sans-serif;
   font-size: $font-m;

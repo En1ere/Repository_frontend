@@ -160,7 +160,7 @@ const normalizeClasses = computed(() => {
       border: 1px solid $color-primary;
     }
 
-    &:focus-visible + .checkmark {
+    &:focus-visible + .switcher {
       outline: 2px solid $color-primary;
       outline-offset: 2px;
     }

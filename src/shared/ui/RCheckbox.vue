@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import RIcon from "@/shared/ui/RIcon.vue";
+
 interface InputProps {
   label?: string
   disabled?: boolean
@@ -28,13 +30,11 @@ const onInput = (event: Event) => {
       @change="onInput"
     />
     <span class="checkmark" aria-hidden="true">
-      <!-- todo icon-->
-      <svg v-if="modelValue" viewBox="0 0 24 24" width="16" height="16">
-        <path
-          fill="currentColor"
-          d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"
-        />
-      </svg>
+      <r-icon
+        v-if="modelValue"
+        name="check"
+        variant="text"
+      />
     </span>
     <span v-if="label" class="label-text">{{ label }}</span>
   </label>
@@ -65,6 +65,7 @@ const onInput = (event: Event) => {
   transition: all 0.2s ease;
   background-color: $color-background-input;
   color: $color-text;
+
 }
 
 .hidden-input {

@@ -36,6 +36,9 @@ const normalizedSize = computed(() => `${props.size}px`)
   background: $color-background-logo;
   border-radius: $border-radius;
   border: none;
+  width: 100%;
+  height: 100%;
+  padding: 2px;
 }
 .logo-path {
   fill: $color-primary;

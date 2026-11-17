@@ -51,11 +51,9 @@ $icon-colors: (
 
 .r-icon {
   display: inline-block;
+  transition: all 0.2s;
   flex-shrink: 0;
   vertical-align: middle;
-  transition:
-    color 0.15s ease,
-    transform 0.2s ease;
 
   @each $name, $value in $icon-colors {
     &_color-#{$name} {
