@@ -199,12 +199,12 @@ h1:first-letter {
 
   &--light {
     color: #7a1743;
-    background: #fff7fb;
+    background: #e8ebf0;
   }
 
   &--dark {
     color: #ff0f5f;
-    background: #0d1117;
+    background: #252c36;
   }
 }
 figcaption {
