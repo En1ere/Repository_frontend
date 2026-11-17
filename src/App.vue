@@ -79,17 +79,11 @@ const switcher = ref(false);
       <r-icon name="chevronDown"/>
       <r-icon name="chevronRight"/>
       <r-icon name="dragHandle"/>
-    </div>
-    <hr>
-    <span>Исправлено</span>
-    <div class="icons">
-      <r-icon name="cameraOff"/>
       <r-icon name="ellipsisVertical"/>
       <r-icon name="moveHorizontal"/>
       <r-icon name="wrench"/>
       <r-icon name="settings"/>
       <r-icon name="userCrown"/>
-      <r-icon name="chrome"/>
       <r-icon name="calendar"/>
       <r-icon name="file"/>
       <r-icon name="fileText"/>
@@ -97,15 +91,19 @@ const switcher = ref(false);
       <r-icon name="users"/>
     </div>
     <hr>
+    <span>Нужно еще доправить</span>
+    <div class="icons">
+      <r-icon name="cameraOff"/>
+      <r-icon name="chrome"/>
+    </div>
+    <hr>
     <span>Фоновые SVG-иллюстрации</span>
     <div class="illustrations">
       <figure class="illustration illustration--light">
         <r-icon name="imageErrorLight" :size="160" />
-        <figcaption>Ошибка фото · светлая тема</figcaption>
       </figure>
       <figure class="illustration illustration--dark">
         <r-icon name="imageErrorDark" :size="160" />
-        <figcaption>Ошибка фото · тёмная тема</figcaption>
       </figure>
       <figure class="illustration illustration--dark">
         <r-icon name="totpSetup" :size="160" />
