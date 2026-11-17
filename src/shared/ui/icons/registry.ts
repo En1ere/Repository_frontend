@@ -2,7 +2,6 @@ import type { Component } from 'vue'
 import IconArchive from './IconArchive.vue'
 import IconArrowLeftRight from './IconArrowLeftRight.vue'
 import IconBell from './IconBell.vue'
-import IconBoxes from './IconBoxes.vue'
 import IconCalendar from './IconCalendar.vue'
 import IconCamera from './IconCamera.vue'
 import IconCameraOff from './IconCameraOff.vue'
@@ -29,16 +28,12 @@ import IconHistory from './IconHistory.vue'
 import IconHome from './IconHome.vue'
 import IconImageErrorDark from './IconImageErrorDark.vue'
 import IconImageErrorLight from './IconImageErrorLight.vue'
-import IconImageOff from './IconImageOff.vue'
 import IconImages from './IconImages.vue'
 import IconInfo from './IconInfo.vue'
-import IconKeyCheck from './IconKeyCheck.vue'
-import IconKeyMail from './IconKeyMail.vue'
 import IconKeyboard from './IconKeyboard.vue'
 import IconLocateFixed from './IconLocateFixed.vue'
 import IconLogOut from './IconLogOut.vue'
 import IconMail from './IconMail.vue'
-import IconMailCheck from './IconMailCheck.vue'
 import IconMapPin from './IconMapPin.vue'
 import IconMenu from './IconMenu.vue'
 import IconMinus from './IconMinus.vue'
@@ -51,7 +46,6 @@ import IconPasswordReset from './IconPasswordReset.vue'
 import IconPlus from './IconPlus.vue'
 import IconPlusLarge from './IconPlusLarge.vue'
 import IconQrCode from './IconQrCode.vue'
-import IconRecoveryCodes from './IconRecoveryCodes.vue'
 import IconRecoveryCodesIllustration from './IconRecoveryCodesIllustration.vue'
 import IconRecoveryExpired from './IconRecoveryExpired.vue'
 import IconRegistrationBoxes from './IconRegistrationBoxes.vue'
@@ -63,7 +57,6 @@ import IconShieldInfo from './IconShieldInfo.vue'
 import IconShieldX from './IconShieldX.vue'
 import IconSlidersHorizontal from './IconSlidersHorizontal.vue'
 import IconSmartphone from './IconSmartphone.vue'
-import IconSmartphoneShieldCheck from './IconSmartphoneShieldCheck.vue'
 import IconSun from './IconSun.vue'
 import IconTotpSetup from './IconTotpSetup.vue'
 import IconTotpVerification from './IconTotpVerification.vue'
@@ -80,7 +73,6 @@ export const iconRegistry = {
   archive: IconArchive,
   arrowLeftRight: IconArrowLeftRight,
   bell: IconBell,
-  boxes: IconBoxes,
   calendar: IconCalendar,
   camera: IconCamera,
   cameraOff: IconCameraOff,
@@ -105,20 +97,16 @@ export const iconRegistry = {
   hash: IconHash,
   history: IconHistory,
   home: IconHome,
-  imageOff: IconImageOff,
   imageErrorDark: IconImageErrorDark,
   imageErrorLight: IconImageErrorLight,
   images: IconImages,
   info: IconInfo,
-  keyCheck: IconKeyCheck,
-  keyMail: IconKeyMail,
   passwordRecovery: IconPasswordRecovery,
   passwordReset: IconPasswordReset,
   keyboard: IconKeyboard,
   locateFixed: IconLocateFixed,
   logOut: IconLogOut,
   mail: IconMail,
-  mailCheck: IconMailCheck,
   mapPin: IconMapPin,
   menu: IconMenu,
   minus: IconMinus,
@@ -129,7 +117,6 @@ export const iconRegistry = {
   plus: IconPlus,
   plusLarge: IconPlusLarge,
   qrCode: IconQrCode,
-  recoveryCodes: IconRecoveryCodes,
   recoveryCodesIllustration: IconRecoveryCodesIllustration,
   recoveryExpired: IconRecoveryExpired,
   registrationBoxes: IconRegistrationBoxes,
@@ -141,7 +128,6 @@ export const iconRegistry = {
   shieldX: IconShieldX,
   slidersHorizontal: IconSlidersHorizontal,
   smartphone: IconSmartphone,
-  smartphoneShieldCheck: IconSmartphoneShieldCheck,
   sun: IconSun,
   totpSetup: IconTotpSetup,
   totpVerification: IconTotpVerification,

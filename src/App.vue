@@ -92,10 +92,6 @@ const switcher = ref(false);
       <r-icon name="shieldInfo"/>
       <r-icon name="download"/>
       <r-icon name="clock"/>
-    </div>
-    <hr>
-    <span>Нужно еще доправить</span>
-    <div class="icons">
       <r-icon name="cameraOff"/>
       <r-icon name="chrome"/>
     </div>
@@ -141,17 +137,6 @@ const switcher = ref(false);
         <figcaption>Новый пароль</figcaption>
       </figure>
     </div>
-    <hr>
-    <span>Исходные glyph-иконки, заменённые фоновыми иллюстрациями</span>
-    <div class="icons">
-      <r-icon name="boxes"/>
-      <r-icon name="imageOff"/>
-      <r-icon name="keyCheck"/>
-      <r-icon name="keyMail"/>
-      <r-icon name="mailCheck"/>
-      <r-icon name="recoveryCodes"/>
-      <r-icon name="smartphoneShieldCheck"/>
-    </div>
   </div>
   <main>
     <RouterView />
@@ -182,7 +167,7 @@ h1:first-letter {
 }
 .illustrations {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(2, minmax(200px, 1fr));
   gap: 12px;
 }
 .illustration {
