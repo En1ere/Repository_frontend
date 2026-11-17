@@ -6,7 +6,7 @@ export type IconColor = 'primary' | 'text' | 'destructive' | 'success' | 'warnin
 
 export interface RIconProps {
   name: IconName
-  variant: IconColor
+  variant?: IconColor
   size?: number
   rotate?: number
 }
