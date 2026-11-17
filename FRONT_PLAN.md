@@ -186,7 +186,7 @@
 
 Зависимости backend: root/entity/children/path/recent containers/create/update/quantity.
 
-- [ ] Создать entity slice `catalog-entity`.
+- [ ] Создать entity slice `catalog`.
 - [ ] Реализовать root и cursor pagination непосредственных детей.
 - [ ] Не загружать всё дерево при открытии каталога.
 - [ ] Реализовать breadcrumbs через отдельную path query.
