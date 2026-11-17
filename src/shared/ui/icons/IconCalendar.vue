@@ -7,7 +7,8 @@
     stroke-linecap="round"
     stroke-linejoin="round"
   >
-    <rect x="3" y="5" width="18" height="16" rx="2" />
-    <path d="M16 3v4M8 3v4M3 10h18" />
+    <rect x="3" y="4" width="18" height="17" rx="3" />
+    <path d="M16 2v4M8 2v4M3 9h18" />
+    <path d="M7 13h2m3 0h2m3 0h.01M7 17h2m3 0h2m3 0h.01" />
   </svg>
 </template>

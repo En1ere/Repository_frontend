@@ -7,8 +7,9 @@
     stroke-linecap="round"
     stroke-linejoin="round"
   >
-    <path
-      d="m2 2 20 20M7 7H5a2 2 0 0 0-2 2v9h14M9 5h2l2-2h4l2 2h1a2 2 0 0 1 2 2v10M10.5 10.5a3 3 0 0 0 4 4"
-    />
+    <path d="M4 8h3l1.5-2h7L17 8h3a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2v-8a2 2 0 0 1 2-2Z" />
+    <circle cx="12" cy="14" r="3" />
+    <circle cx="19" cy="6" r="4" fill="currentColor" stroke="none" />
+    <path d="m17.5 4.5 3 3m0-3-3 3" stroke="white" stroke-width="1.5" />
   </svg>
 </template>

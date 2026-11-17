@@ -17,6 +17,8 @@ import IconClose from './IconClose.vue'
 import IconContainer from './IconContainer.vue'
 import IconCopy from './IconCopy.vue'
 import IconDragHandle from './IconDragHandle.vue'
+import IconDownload from './IconDownload.vue'
+import IconEmailVerification from './IconEmailVerification.vue'
 import IconEllipsisVertical from './IconEllipsisVertical.vue'
 import IconEye from './IconEye.vue'
 import IconFile from './IconFile.vue'
@@ -25,6 +27,8 @@ import IconFolder from './IconFolder.vue'
 import IconHash from './IconHash.vue'
 import IconHistory from './IconHistory.vue'
 import IconHome from './IconHome.vue'
+import IconImageErrorDark from './IconImageErrorDark.vue'
+import IconImageErrorLight from './IconImageErrorLight.vue'
 import IconImageOff from './IconImageOff.vue'
 import IconImages from './IconImages.vue'
 import IconInfo from './IconInfo.vue'
@@ -42,19 +46,27 @@ import IconMonitor from './IconMonitor.vue'
 import IconMoon from './IconMoon.vue'
 import IconMoveHorizontal from './IconMoveHorizontal.vue'
 import IconPencil from './IconPencil.vue'
+import IconPasswordRecovery from './IconPasswordRecovery.vue'
+import IconPasswordReset from './IconPasswordReset.vue'
 import IconPlus from './IconPlus.vue'
 import IconPlusLarge from './IconPlusLarge.vue'
 import IconQrCode from './IconQrCode.vue'
 import IconRecoveryCodes from './IconRecoveryCodes.vue'
+import IconRecoveryCodesIllustration from './IconRecoveryCodesIllustration.vue'
+import IconRecoveryExpired from './IconRecoveryExpired.vue'
+import IconRegistrationBoxes from './IconRegistrationBoxes.vue'
 import IconSearch from './IconSearch.vue'
 import IconSearchPlus from './IconSearchPlus.vue'
 import IconSettings from './IconSettings.vue'
 import IconShieldCheck from './IconShieldCheck.vue'
+import IconShieldInfo from './IconShieldInfo.vue'
 import IconShieldX from './IconShieldX.vue'
 import IconSlidersHorizontal from './IconSlidersHorizontal.vue'
 import IconSmartphone from './IconSmartphone.vue'
 import IconSmartphoneShieldCheck from './IconSmartphoneShieldCheck.vue'
 import IconSun from './IconSun.vue'
+import IconTotpSetup from './IconTotpSetup.vue'
+import IconTotpVerification from './IconTotpVerification.vue'
 import IconTrash from './IconTrash.vue'
 import IconUser from './IconUser.vue'
 import IconUserArrowRight from './IconUserArrowRight.vue'
@@ -83,6 +95,8 @@ export const iconRegistry = {
   container: IconContainer,
   copy: IconCopy,
   dragHandle: IconDragHandle,
+  download: IconDownload,
+  emailVerification: IconEmailVerification,
   ellipsisVertical: IconEllipsisVertical,
   eye: IconEye,
   file: IconFile,
@@ -92,10 +106,14 @@ export const iconRegistry = {
   history: IconHistory,
   home: IconHome,
   imageOff: IconImageOff,
+  imageErrorDark: IconImageErrorDark,
+  imageErrorLight: IconImageErrorLight,
   images: IconImages,
   info: IconInfo,
   keyCheck: IconKeyCheck,
   keyMail: IconKeyMail,
+  passwordRecovery: IconPasswordRecovery,
+  passwordReset: IconPasswordReset,
   keyboard: IconKeyboard,
   locateFixed: IconLocateFixed,
   logOut: IconLogOut,
@@ -112,15 +130,21 @@ export const iconRegistry = {
   plusLarge: IconPlusLarge,
   qrCode: IconQrCode,
   recoveryCodes: IconRecoveryCodes,
+  recoveryCodesIllustration: IconRecoveryCodesIllustration,
+  recoveryExpired: IconRecoveryExpired,
+  registrationBoxes: IconRegistrationBoxes,
   search: IconSearch,
   searchPlus: IconSearchPlus,
   settings: IconSettings,
   shieldCheck: IconShieldCheck,
+  shieldInfo: IconShieldInfo,
   shieldX: IconShieldX,
   slidersHorizontal: IconSlidersHorizontal,
   smartphone: IconSmartphone,
   smartphoneShieldCheck: IconSmartphoneShieldCheck,
   sun: IconSun,
+  totpSetup: IconTotpSetup,
+  totpVerification: IconTotpVerification,
   trash: IconTrash,
   user: IconUser,
   userArrowRight: IconUserArrowRight,

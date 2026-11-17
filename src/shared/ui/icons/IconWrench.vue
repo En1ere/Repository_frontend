@@ -7,7 +7,6 @@
     stroke-linecap="round"
     stroke-linejoin="round"
   >
-    <path d="M14.7 6.3a4 4 0 0 0-5-5L7.5 3.5l3 3-4 4-2-2-2 2a4 4 0 0 0 5 5L17 6l-2.3.3Z" />
-    <path d="m14 9 7 7a2.1 2.1 0 0 1-3 3l-7-7" />
+    <path d="M14.5 3.5A5 5 0 0 0 8.3 9.7l-5.8 5.8a2.1 2.1 0 0 0 3 3l5.8-5.8a5 5 0 0 0 6.2-6.2L14 10l-3-3 3.5-3.5Z" />
   </svg>
 </template>

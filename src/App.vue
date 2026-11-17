@@ -81,39 +81,86 @@ const switcher = ref(false);
       <r-icon name="dragHandle"/>
     </div>
     <hr>
-    <span>Нужно поправить</span>
+    <span>Исправлено</span>
     <div class="icons">
-      <r-icon name="cameraOff"/><!--catalog-photo-camera-denied-reference-->
-      <r-icon name="ellipsisVertical"/> <!--сделать точки побольше-->
-      <r-icon name="moveHorizontal"/> <!--неясно, что вообще делает. Вероятно из catalog-history-reference на пункте перемещен - нужно исправить-->
-      <r-icon name="wrench"/> <!--тут просто сломана - изменить полностью-->
-      <r-icon name="settings"/> <!--сделать более рельефную - сливается-->
-      <r-icon name="userCrown"/> <!--корона не считывается-->
-      <r-icon name="chrome"/> <!--Сделать линии загнутыми, как в лого хрома-->
-      <r-icon name="calendar"/> <!--календарь выглядит как просто блокнот - нужно доработать-->
-      <r-icon name="file"/> <!--Слишком узкая и высокая. Вероятно, должна быть частью фона, а не прям иконка (уточнить)-->
-      <r-icon name="fileText"/> <!--Слишком узкая и высокая. Вероятно, должна быть частью фона, а не прям иконка (уточнить)-->
-      <r-icon name="logOut"/> <!--сделать более понятную - слишком узкая-->
-      <r-icon name="users"/> <!-- account-deletion-reference тут хороший вариант есть-->
+      <r-icon name="cameraOff"/>
+      <r-icon name="ellipsisVertical"/>
+      <r-icon name="moveHorizontal"/>
+      <r-icon name="wrench"/>
+      <r-icon name="settings"/>
+      <r-icon name="userCrown"/>
+      <r-icon name="chrome"/>
+      <r-icon name="calendar"/>
+      <r-icon name="file"/>
+      <r-icon name="fileText"/>
+      <r-icon name="logOut"/>
+      <r-icon name="users"/>
     </div>
     <hr>
-    <span>Должна быть большая не просто иконка, а как часть визуального фона</span>
-    <div class="icons">
-      <r-icon name="imageOff"/><!--Нужно две вариации: для светлой и темной тем: catalog-photo-processing-error-reference-->
-      <r-icon name="smartphoneShieldCheck"/> <!--нужно две: auth-totp-setup-mobile-reference и auth-totp-verification-reference-->
-      <r-icon name="mailCheck"/> <!--auth-email-verification-reference -->
-      <r-icon name="boxes"/> <!-- auth-registration-reference -->
-      <r-icon name="recoveryCodes"/> <!--auth-recovery-codes-reference-->
-      <r-icon name="clockLarge"/> <!--(account-recovery-expired-reference)-->
-      <r-icon name="keyMail"/><!--Не понял от чего это, но вероятно для экрана auth-password-recovery-start-reference - исправить-->
-      <r-icon name="keyCheck"/> <!--auth-password-reset-reference - подогнать, под визуал-->
+    <span>Фоновые SVG-иллюстрации</span>
+    <div class="illustrations">
+      <figure class="illustration illustration--light">
+        <r-icon name="imageErrorLight" :size="160" />
+        <figcaption>Ошибка фото · светлая тема</figcaption>
+      </figure>
+      <figure class="illustration illustration--dark">
+        <r-icon name="imageErrorDark" :size="160" />
+        <figcaption>Ошибка фото · тёмная тема</figcaption>
+      </figure>
+      <figure class="illustration illustration--dark">
+        <r-icon name="totpSetup" :size="160" />
+        <figcaption>Настройка TOTP</figcaption>
+      </figure>
+      <figure class="illustration illustration--dark">
+        <r-icon name="totpVerification" :size="160" />
+        <figcaption>Проверка TOTP</figcaption>
+      </figure>
+      <figure class="illustration illustration--dark">
+        <r-icon name="emailVerification" :size="160" />
+        <figcaption>Подтверждение e-mail</figcaption>
+      </figure>
+      <figure class="illustration illustration--dark">
+        <r-icon name="registrationBoxes" :size="160" />
+        <figcaption>Регистрация</figcaption>
+      </figure>
+      <figure class="illustration illustration--dark">
+        <r-icon name="recoveryCodesIllustration" :size="160" />
+        <figcaption>Резервные коды</figcaption>
+      </figure>
+      <figure class="illustration illustration--dark">
+        <r-icon name="recoveryExpired" :size="160" />
+        <figcaption>Срок восстановления истёк</figcaption>
+      </figure>
+      <figure class="illustration illustration--dark">
+        <r-icon name="passwordRecovery" :size="160" />
+        <figcaption>Запрос восстановления пароля</figcaption>
+      </figure>
+      <figure class="illustration illustration--dark">
+        <r-icon name="passwordReset" :size="160" />
+        <figcaption>Новый пароль</figcaption>
+      </figure>
     </div>
     <hr>
-    <span>Не хватает в реестре</span>
-    <div>
-      щит с инфо: например, тут в инфо-подписи: auth-password-recovery-start-reference
-      <br>
-      скачать: тут для скачивания auth-recovery-codes-reference
+    <span>Новые обычные иконки</span>
+    <div class="icons">
+      <r-icon name="shieldInfo"/>
+      <r-icon name="download"/>
+    </div>
+    <hr>
+    <span>Была в реестре, но отсутствовала в App.vue</span>
+    <div class="icons">
+      <r-icon name="clock"/>
+    </div>
+    <hr>
+    <span>Исходные glyph-иконки, заменённые фоновыми иллюстрациями</span>
+    <div class="icons">
+      <r-icon name="boxes"/>
+      <r-icon name="imageOff"/>
+      <r-icon name="keyCheck"/>
+      <r-icon name="keyMail"/>
+      <r-icon name="mailCheck"/>
+      <r-icon name="recoveryCodes"/>
+      <r-icon name="smartphoneShieldCheck"/>
     </div>
   </div>
   <main>
@@ -142,6 +189,37 @@ h1:first-letter {
   display: grid;
   grid-template-columns: repeat(8, 36px);
   gap: 8px;
+}
+.illustrations {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+}
+.illustration {
+  min-height: 210px;
+  margin: 0;
+  padding: 12px;
+  border: 1px solid $color-border;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  &--light {
+    color: #7a1743;
+    background: #fff7fb;
+  }
+
+  &--dark {
+    color: #ff0f5f;
+    background: #0d1117;
+  }
+}
+figcaption {
+  color: inherit;
+  text-align: center;
 }
 span {
   display: block;
