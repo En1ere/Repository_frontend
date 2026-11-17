@@ -1,3 +1,5 @@
+export type WorkspaceId = string;
+
 export const enum WorkspaceType {
   PERSONAL = 'personal',
   SHARED = 'shared'

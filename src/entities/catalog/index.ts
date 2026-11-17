@@ -1,13 +1,11 @@
-import type {WorkspaceId} from "@/entities/workspace";
 import {
-  AttachmentStatus,
+  type AttachmentId,
+  AttachmentStatus, type CatalogEntityId,
   CatalogEntityKind,
-  CatalogEntityStatus
+  CatalogEntityStatus, EntityIdentifierType, EntityState, type IdentifierId, type Tag
 } from "@/entities/catalog/enums.ts";
-import type {UserId} from "@/entities/user";
-
-export type CatalogEntityId = string;
-export type AttachmentId = string;
+import type {WorkspaceId} from "@/entities/workspace/enums.ts";
+import type {UserId} from "@/entities/user/enums.ts";
 
 export interface CatalogEntity {
   id: CatalogEntityId
@@ -27,6 +25,10 @@ export interface CatalogEntity {
   updatedAt: string
   archivedAt?: string
   attachments?: Attachment[]
+  identifiers: CatalogEntityIdentifier[]
+  tags: Tag[]
+  state: EntityState
+  //   todo fields specification 7.3-7.5
 }
 
 export interface Attachment {
@@ -36,4 +38,12 @@ export interface Attachment {
   kind: string
   size: number
   status: AttachmentStatus
+}
+
+export interface CatalogEntityIdentifier {
+  id: IdentifierId
+  entityId: CatalogEntityId
+  type: EntityIdentifierType
+  value: string
+  createdAt: string
 }

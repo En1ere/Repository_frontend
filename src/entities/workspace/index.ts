@@ -1,8 +1,11 @@
-import {InvitationStatus, WorkspaceType, WorkspaceUserRole} from "@/entities/workspace/enums.ts";
-import type {UserId} from "@/entities/user";
-import type {CatalogEntityId} from "@/entities/catalog";
-
-export type WorkspaceId = string;
+import {
+  InvitationStatus,
+  type WorkspaceId,
+  WorkspaceType,
+  WorkspaceUserRole
+} from "@/entities/workspace/enums.ts";
+import type {CatalogEntityId} from "@/entities/catalog/enums.ts";
+import type {UserId} from "@/entities/user/enums.ts";
 
 export interface Workspace {
   id: WorkspaceId

@@ -1,7 +1,5 @@
-import type {Statuses} from "@/entities/user/enums.ts";
+import type {Statuses, UserId} from "@/entities/user/enums.ts";
 import type {Membership} from "@/entities/workspace";
-
-export type UserId = string;
 
 export interface User {
   id: UserId
