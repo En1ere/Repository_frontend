@@ -89,6 +89,9 @@ const switcher = ref(false);
       <r-icon name="fileText"/>
       <r-icon name="logOut"/>
       <r-icon name="users"/>
+      <r-icon name="shieldInfo"/>
+      <r-icon name="download"/>
+      <r-icon name="clock"/>
     </div>
     <hr>
     <span>Нужно еще доправить</span>
@@ -137,17 +140,6 @@ const switcher = ref(false);
         <r-icon name="passwordReset" :size="160" />
         <figcaption>Новый пароль</figcaption>
       </figure>
-    </div>
-    <hr>
-    <span>Новые обычные иконки</span>
-    <div class="icons">
-      <r-icon name="shieldInfo"/>
-      <r-icon name="download"/>
-    </div>
-    <hr>
-    <span>Была в реестре, но отсутствовала в App.vue</span>
-    <div class="icons">
-      <r-icon name="clock"/>
     </div>
     <hr>
     <span>Исходные glyph-иконки, заменённые фоновыми иллюстрациями</span>
