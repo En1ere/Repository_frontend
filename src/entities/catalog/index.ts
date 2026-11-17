@@ -1,8 +1,13 @@
 import {
   type AttachmentId,
-  AttachmentStatus, type CatalogEntityId,
+  AttachmentStatus,
+  type CatalogEntityId,
   CatalogEntityKind,
-  CatalogEntityStatus, EntityIdentifierType, EntityState, type IdentifierId, type Tag
+  CatalogEntityStatus,
+  EntityIdentifierType,
+  EntityState,
+  type IdentifierId,
+  type Tag
 } from "@/entities/catalog/enums.ts";
 import type {WorkspaceId} from "@/entities/workspace/enums.ts";
 import type {UserId} from "@/entities/user/enums.ts";
