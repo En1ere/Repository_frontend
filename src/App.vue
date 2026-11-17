@@ -21,9 +21,7 @@ const options = [
 const selected = ref<DropdownOption|null>(null);
 
 const setSelected = (data: DropdownOption) => {
-  console.log(12123)
   selected.value = data
-  console.log(data)
 }
 </script>
 

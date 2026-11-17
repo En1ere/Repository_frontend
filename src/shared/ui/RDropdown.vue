@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import RIcon from "@/shared/ui/RIcon.vue";
 import {computed, onBeforeUnmount, onMounted, ref} from "vue";
-import type {StyleSize} from "@/shared/types/styleSize.ts";
+import type {SizeTypes} from "@/shared/types/styleTypes.ts";
 
 export type DropdownOption = {
   id: number,
@@ -11,7 +11,7 @@ interface DropdownProps {
   options: DropdownOption[]
   modelValue: DropdownOption|null
   label?: string
-  size?: StyleSize
+  size?: SizeTypes
   disabled?: boolean
 }
 

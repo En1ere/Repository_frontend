@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import {computed} from "vue";
-import type {ContentTypes, FillTypes, StyleSize} from "@/shared/types/styleSize.ts";
+import type {ContentTypes, FillTypes, SizeTypes} from "@/shared/types/styleTypes.ts";
 
 interface ButtonProps {
-  size?: StyleSize,
+  size?: SizeTypes,
   fillType?: FillTypes,
   contentType?: ContentTypes,
   disabled?: boolean
