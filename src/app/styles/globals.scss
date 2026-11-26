@@ -23,6 +23,9 @@ body {
   background: $color-background-dark;
   color: $color-text;
   width: 100%;
-  display: flex;
-  justify-content: flex-end;
+}
+
+#app {
+  height: 100dvh;
+  min-height: 100dvh;
 }
