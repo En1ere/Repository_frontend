@@ -1,7 +1,8 @@
 export enum AuthPath {
-  SIGN_IN = '/sign-in',
-  SIGN_UP = '/sign-up',
-  RECOVER_PASSWORD = '/recover-password',
+  SIGN_IN = '/login',
+  SIGN_UP = '/register',
+  RESET_PASSWORD = '/resetPassword',
+  RECOVER_PASSWORD = '/recoverPassword',
 }
 
 export type UserStatusType = 'active'
@@ -25,6 +26,10 @@ export interface LogoutDto {
   loggedOut: true
 }
 
+export interface ResetPasswordDto {
+  passwordChanged: true
+}
+
 // _________________Payload____________________________
 
 export interface LoginPayload {
@@ -35,4 +40,9 @@ export interface LoginPayload {
 export interface RegisterPayload {
   login: string
   password: string
+}
+
+export interface ResetPasswordPayload {
+  oldPassword: string
+  newPassword: string
 }

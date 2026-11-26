@@ -1,10 +1,11 @@
 <script setup lang="ts">
 import RBottomSection from "@/shared/ui/RBottomSection.vue";
-import SignIn from "@/features/auth/sign-in/SignIn.vue";
-import SignUp from "@/features/auth/sign-up/SignUp.vue";
 import IconRegistrationBoxes from "@/shared/ui/icons/IconRegistrationBoxes.vue";
+import useAuth from "@/features/auth/composables/useAuth.ts";
+import IconPasswordReset from "@/shared/ui/icons/IconPasswordReset.vue";
 
-const signIn = true
+const {isReset} = useAuth()
+
 </script>
 
 <template>
@@ -12,15 +13,16 @@ const signIn = true
     <div class="auth__content">
       <h1 class="auth__title">Repository</h1>
       <div class="auth__img">
-        <IconRegistrationBoxes />
+        <IconPasswordReset v-if="isReset" />
+        <IconRegistrationBoxes v-else />
+        <Icon />
       </div>
       <span class="auth__subtitle">
         Все на своих местах
       </span>
     </div>
     <RBottomSection>
-      <SignIn v-if="signIn" />
-      <SignUp v-if="!signIn" />
+      <slot />
     </RBottomSection>
   </main>
 </template>
@@ -39,14 +41,17 @@ const signIn = true
     }
     &__title {
       font-size: $font-title;
-      font-family: 'CheyenneBold', sans-serif;;
+      font-family: 'CheyenneBold', sans-serif;
+    }
+    &__subtitle {
+      color: $color-text-gray;
     }
     &__img {
       display: flex;
       align-items: center;
       justify-content: center;
-      width: 300px;
-      height: 300px;
+      width: 100%;
+      height: 100%;
       color: $color-primary;
     }
     &__subtitle {

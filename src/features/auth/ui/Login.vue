@@ -2,22 +2,23 @@
 import RInput from "@/shared/ui/RInput.vue";
 import {reactive} from "vue";
 import RButton from "@/shared/ui/RButton.vue";
-import {useAuth} from "@/features/auth/composables/useAuth.ts";
+import useAuth from "@/features/auth/composables/useAuth.ts";
 import {AuthPath} from "@/features/auth/types/auth.types.ts";
 
-const {navigateTo} = useAuth();
+const {navigateTo, login} = useAuth();
 const userInput = reactive({
   login: '',
   password: ''
 })
 
 const createAccountHandler = () => navigateTo(AuthPath.SIGN_UP)
-const resetPasswordHandler = () => navigateTo(AuthPath.RECOVER_PASSWORD)
+const recoverPasswordHandler = () => navigateTo(AuthPath.RECOVER_PASSWORD)
+const continueHandler = () => login(userInput)
 </script>
 
 <template>
-  <section class="signin">
-    <h1 class="signin__title">
+  <section class="login">
+    <h1 class="login__title">
       Войти
     </h1>
     <RInput
@@ -29,11 +30,12 @@ const resetPasswordHandler = () => navigateTo(AuthPath.RECOVER_PASSWORD)
       :model-value="userInput.password"
     />
     <RButton
-      class="signin__btn"
+      class="login__btn"
+      @click="continueHandler"
     >
       Продолжить
     </RButton>
-    <div class="signin__links">
+    <div class="login__links">
       <RButton
         fill-type="empty"
         @click="createAccountHandler"
@@ -42,7 +44,7 @@ const resetPasswordHandler = () => navigateTo(AuthPath.RECOVER_PASSWORD)
       </RButton>
       <RButton
         fill-type="empty"
-        @click="resetPasswordHandler"
+        @click="recoverPasswordHandler"
       >
         Забыли пароль?
       </RButton>
@@ -51,12 +53,15 @@ const resetPasswordHandler = () => navigateTo(AuthPath.RECOVER_PASSWORD)
 </template>
 
 <style scoped lang="scss">
-  .signin {
+  .login {
     width: 100%;
     display: flex;
     flex-direction: column;
     gap: 16px;
 
+    &__title {
+      margin: 0 0 24px;
+    }
     &__btn {
       width: 100%;
     }

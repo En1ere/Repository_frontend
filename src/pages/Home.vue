@@ -31,6 +31,7 @@ const setSelected = (data: DropdownOption) => {
   <nav>
     <RouterLink to="/">Go to Home</RouterLink>
     <RouterLink to="/about">Go to About</RouterLink>
+    <RouterLink to="/login">Go to auth</RouterLink>
   </nav>
   <div class="test">
 

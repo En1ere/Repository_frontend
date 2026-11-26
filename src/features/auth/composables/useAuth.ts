@@ -1,17 +1,28 @@
-import {useRouter} from "vue-router";
+import {useRoute, useRouter} from "vue-router";
+import {apiRequest} from "@/shared/api/http.ts";
 import {
   AuthPath, type LoginDto,
   type LoginPayload, type LogoutDto,
-  type RegisterPayload, type UserDto
+  type RegisterPayload, type ResetPasswordDto, type ResetPasswordPayload, type UserDto
 } from "@/features/auth/types/auth.types.ts";
-import {apiRequest} from "@/shared/api/http.ts";
+import {computed} from "vue";
 
-export const useAuth = () => {
+const useAuth = () => {
+  const route = useRoute()
   const router = useRouter()
+
+  // todo recover password
 
   const navigateTo = (path: AuthPath) => {
     router.push(path).then()
   }
+
+  const currentPage = computed(() => route.path);
+  const isReset = computed(() => {
+    return currentPage.value === AuthPath.RESET_PASSWORD || currentPage.value === AuthPath.RECOVER_PASSWORD
+  })
+
+
 
   const logout = async() => {
     return await apiRequest<LogoutDto>('/logout', {})
@@ -29,11 +40,15 @@ export const useAuth = () => {
     })
   }
 
-  const resetPassword = async() => {
-
+  const resetPassword = async(payload: ResetPasswordPayload) => {
+    return await apiRequest<ResetPasswordDto>('/resetPassword', {
+      body: payload
+    })
   }
 
   return {
+    currentPage,
+    isReset,
     navigateTo,
     logout,
     login,
@@ -41,3 +56,4 @@ export const useAuth = () => {
     resetPassword
   }
 }
+export default useAuth
