@@ -1,10 +1,12 @@
 <script setup lang="ts">
-
+import AppearanceSettings from "@/features/user/ui/AppearanceSettings.vue";
+import DataSettings from "@/features/user/ui/DataSettings.vue";
 </script>
 
 <template>
   <div>
-    <UserData />
+    <DataSettings />
+    <AppearanceSettings />
   </div>
 </template>
 
