@@ -1,10 +1,10 @@
 <script setup lang="ts">
-
+import Header from "@/app/ui/Header.vue";
 </script>
 
 <template>
-  <div>
-    <h1>default layout</h1>
+  <div class="wrapper">
+    <Header />
     <slot />
   </div>
 </template>

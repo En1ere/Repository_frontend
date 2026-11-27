@@ -1,12 +1,19 @@
 <script setup lang="ts">
-
+type SectionProps = {
+  title: string
+}
+const props = withDefaults(defineProps<SectionProps>(), {
+  title: ''
+})
 </script>
 
 <template>
-  <div>
-    <h1>title</h1>
+  <section>
+    <h2>
+      {{ title }}
+    </h2>
     <div>list</div>
-  </div>
+  </section>
 </template>
 
 <style scoped lang="scss">
