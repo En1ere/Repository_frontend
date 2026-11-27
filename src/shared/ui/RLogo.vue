@@ -33,7 +33,7 @@ const normalizedSize = computed(() => `${props.size}px`)
 
 <style scoped lang="scss">
 .logo-wrapper {
-  background: $color-background-logo;
+  background: var(--color-background-logo);
   border-radius: $border-radius;
   border: none;
   width: 100%;
@@ -41,6 +41,6 @@ const normalizedSize = computed(() => `${props.size}px`)
   padding: 2px;
 }
 .logo-path {
-  fill: $color-primary;
+  fill: var(--color-primary);
 }
 </style>

@@ -38,19 +38,19 @@ const normalizeClasses = computed(() => {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 1px solid $color-primary;
+    border: 1px solid var(--color-primary);
     cursor: pointer;
     transition: all 0.2s;
 
     &:focus-visible {
-      outline: 1px solid $color-primary !important;
+      outline: 1px solid var(--color-primary) !important;
       outline-offset: 4px;
     }
   }
 
   .primary {
-    background: $color-primary;
-    color: $color-text;
+    background: var(--color-primary);
+    color: var(--color-text);
 
     &:hover:not(:disabled) {
       filter: brightness(85%);
@@ -62,10 +62,10 @@ const normalizeClasses = computed(() => {
 
   .outline {
     background: transparent;
-    color: $color-primary;
+    color: var(--color-primary);
 
     &:hover:not(:disabled) {
-      box-shadow: 0 0 10px 1px $color-primary;
+      box-shadow: 0 0 10px 1px var(--color-primary);
     }
     &:active:not(:disabled) {
       filter: brightness(90%);
@@ -75,7 +75,7 @@ const normalizeClasses = computed(() => {
   .destructive {
     background: $color-error;
     border: 1px solid $color-error;
-    color: $color-text;
+    color: var(--color-text);
 
     &:hover:not(:disabled) {
       filter: brightness(85%);
@@ -88,7 +88,7 @@ const normalizeClasses = computed(() => {
   .empty {
     border-color: transparent;
     background: transparent;
-    color: $color-primary;
+    color: var(--color-primary);
 
     &:hover:not(:disabled) {
       text-decoration: underline;

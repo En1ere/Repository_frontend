@@ -63,17 +63,17 @@ const normalizeClasses = computed(() => {
 
   .switcher-label {
     margin: 0 0 0 12px;
-    color: $color-text-gray;
+    color: var(--color-text-gray);
 
     &.disabled {
-      color: $color-disabled;
+      color: var(--color-disabled);
     }
   }
 
   .switcher {
-    background: $color-background-input;
+    background: var(--color-background-input);
     border-radius: 24px;
-    border: 1px solid $color-border;
+    border: 1px solid var(--color-border);
     display: flex;
     padding: 6px;
     transition: all 0.2s;
@@ -97,7 +97,7 @@ const normalizeClasses = computed(() => {
     &.disabled {
       cursor: default;
       pointer-events: none;
-      border: 1px solid $color-disabled;
+      border: 1px solid var(--color-disabled);
       opacity: 0.7;
     }
   }
@@ -105,9 +105,9 @@ const normalizeClasses = computed(() => {
   .dot {
     display: block;
     border-radius: 100%;
-    background: $color-text-gray;
+    background: var(--color-text-gray);
     transition: all 0.2s cubic-bezier(0.34, 1.56, 0.64, 1);
-    border: 1px solid $color-text-gray;
+    border: 1px solid var(--color-text-gray);
     transform: translateX(0px);
 
     &.s {
@@ -139,12 +139,12 @@ const normalizeClasses = computed(() => {
     }
 
     &.disabled {
-      background: $color-disabled;
-      border: 1px solid $color-disabled;
+      background: var(--color-disabled);
+      border: 1px solid var(--color-disabled);
     }
     &.active {
-      background: $color-text;
-      border: 1px solid $color-text;
+      background: var(--color-text);
+      border: 1px solid var(--color-text);
     }
   }
 
@@ -156,12 +156,12 @@ const normalizeClasses = computed(() => {
     pointer-events: none;
 
     &:checked + .switcher {
-      background: $color-primary;
-      border: 1px solid $color-primary;
+      background: var(--color-primary);
+      border: 1px solid var(--color-primary);
     }
 
     &:focus-visible + .switcher {
-      outline: 2px solid $color-primary;
+      outline: 2px solid var(--color-primary);
       outline-offset: 2px;
     }
   }

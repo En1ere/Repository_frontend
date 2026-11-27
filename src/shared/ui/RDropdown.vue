@@ -109,7 +109,7 @@ onBeforeUnmount(() => {
     width: 100%;
     position: relative;
     cursor: pointer;
-    color: $color-label;
+    color: var(--color-label);
 
     &.s {
       height: 32px;
@@ -122,7 +122,7 @@ onBeforeUnmount(() => {
     }
 
     &.value {
-      color: $color-text;
+      color: var(--color-text);
     }
     &.disabled {
       opacity: 0.6;
@@ -137,13 +137,13 @@ onBeforeUnmount(() => {
     align-items: center;
     justify-content: space-between;
     padding: 0 12px;
-    background: $color-background-input;
-    border: 1px solid $color-border;
+    background: var(--color-background-input);
+    border: 1px solid var(--color-border);
     border-radius: $border-radius;
     color: inherit;
 
     &:focus-visible {
-      outline: 2px solid $color-primary;
+      outline: 2px solid var(--color-primary);
       outline-offset: 2px;
     }
   }
@@ -152,8 +152,8 @@ onBeforeUnmount(() => {
     z-index: 100;
     position: absolute;
     width: 100%;
-    background: $color-background-input;
-    border: 1px solid $color-border;
+    background: var(--color-background-input);
+    border: 1px solid var(--color-border);
     border-radius: $border-radius;
     overflow: hidden;
     padding: 4px 0;
@@ -171,7 +171,7 @@ onBeforeUnmount(() => {
     & button {
       background: transparent;
       border: 0;
-      color: $color-text;
+      color: var(--color-text);
       text-align: left;
       padding: 0 12px;
       cursor: pointer;
@@ -191,12 +191,12 @@ onBeforeUnmount(() => {
       }
 
       &:hover {
-        background: color-mix($color-primary 15%, transparent);
+        background: color-mix(var(--color-primary) 15%, transparent);
       }
 
       &:focus-visible {
         outline: 0;
-        background: color-mix($color-primary 15%, transparent);
+        background: color-mix(var(--color-primary) 15%, transparent);
       }
     }
   }

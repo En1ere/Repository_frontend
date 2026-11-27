@@ -41,12 +41,12 @@ const iconStyles = computed<CSSProperties>(() => {
 
 <style scoped lang="scss">
 $icon-colors: (
-  'primary': $color-primary,
-  'text': $color-text,
+  'primary': var(--color-primary),
+  'text': var(--color-text),
   'destructive': $color-error,
   'warning': $color-warning,
   'success': $color-success,
-  'muted': $color-disabled,
+  'muted': var(--color-disabled),
 );
 
 .r-icon {

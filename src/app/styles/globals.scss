@@ -1,4 +1,5 @@
-@use "variables";
+@use "schemes";
+@use "themes";
 @use "font";
 @use "reset";
 
@@ -12,7 +13,7 @@
     border-radius: 4px;
   }
   &::-webkit-scrollbar-thumb {
-    background: variables.$color-primary;
+    background: var(--color-primary);
     border-radius: 4px;
   }
 }
@@ -20,8 +21,8 @@
 body {
   font-family: 'CheyenneRegular', sans-serif;
   font-size: $font-m;
-  background: $color-background-dark;
-  color: $color-text;
+  background: var(--color-background-dark);
+  color: var(--color-text);
   width: 100%;
 }
 

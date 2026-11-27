@@ -44,7 +44,7 @@ const {isReset} = useAuth()
       font-family: 'CheyenneBold', sans-serif;
     }
     &__subtitle {
-      color: $color-text-gray;
+      color: var(--color-text-gray);
     }
     &__img {
       display: flex;
@@ -52,7 +52,7 @@ const {isReset} = useAuth()
       justify-content: center;
       width: 100%;
       height: 100%;
-      color: $color-primary;
+      color: var(--color-primary);
     }
     &__subtitle {
       font-size: $font-m;

@@ -164,15 +164,15 @@ const setSelected = (data: DropdownOption) => {
 
 <style scoped lang="scss">
 h1:first-letter {
-  color: $color-primary;
+  color: var(--color-primary);
 }
 .logo-wrap {
   width: 28px;
   height: 28px;
 }
 .test {
-  background: $color-background-light;
-  border: 1px solid $color-border;
+  background: var(--color-background-light);
+  border: 1px solid var(--color-border);
   margin: 24px;
   padding: 24px;
   display: flex;
@@ -198,7 +198,7 @@ h1:first-letter {
   min-height: 210px;
   margin: 0;
   padding: 12px;
-  border: 1px solid $color-border;
+  border: 1px solid var(--color-border);
   border-radius: 12px;
   display: flex;
   flex-direction: column;

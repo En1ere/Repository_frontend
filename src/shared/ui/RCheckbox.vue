@@ -57,14 +57,14 @@ const onInput = (event: Event) => {
 .checkmark {
   width: 20px;
   height: 20px;
-  border: 2px solid $color-border;
+  border: 2px solid var(--color-border);
   border-radius: 4px;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: all 0.2s ease;
-  background-color: $color-background-input;
-  color: $color-text;
+  background-color: var(--color-background-input);
+  color: var(--color-text);
 
 }
 
@@ -76,17 +76,17 @@ const onInput = (event: Event) => {
   pointer-events: none;
 
   &:checked + .checkmark {
-    background-color: $color-primary;
-    border-color: $color-primary;
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
   }
 
   &:focus-visible + .checkmark {
-    outline: 2px solid $color-primary;
+    outline: 2px solid var(--color-primary);
     outline-offset: 2px;
   }
 }
 
 .label-text {
-  color: $color-text-gray;
+  color: var(--color-text-gray);
 }
 </style>

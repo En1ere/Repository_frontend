@@ -1,0 +1,23 @@
+@use "primitives" as p;
+
+:root {
+  --color-primary: #{p.$color-ruby};
+}
+:root[data-color-scheme='ruby'] {
+  --color-primary: #{p.$color-ruby};
+}
+:root[data-color-scheme='sapphire'] {
+  --color-primary: #{p.$color-sapphire};
+}
+:root[data-color-scheme='onyx'] {
+  --color-primary: #{p.$color-onyx};
+}
+:root[data-color-scheme='emerald'] {
+  --color-primary: #{p.$color-emerald};
+}
+:root[data-color-scheme='citrine'] {
+  --color-primary: #{p.$color-citrine};
+}
+:root[data-color-scheme='amethyst'] {
+  --color-primary: #{p.$color-amethyst};
+}

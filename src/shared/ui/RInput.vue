@@ -68,19 +68,19 @@ const clearInput = () => {
   }
 
   .input-label {
-    color: $color-label;
+    color: var(--color-label);
     font-size: 0.6rem;
     margin-bottom: 4px;
 
     &.disabled {
-      color: $color-disabled;
+      color: var(--color-disabled);
     }
   }
 
   .input-container {
     position: relative;
-    background: $color-background-input;
-    border: 1px solid $color-border;
+    background: var(--color-background-input);
+    border: 1px solid var(--color-border);
     border-radius: $border-radius;
     display: flex;
     justify-content: flex-start;
@@ -97,7 +97,7 @@ const clearInput = () => {
     }
 
     &.disabled {
-      border: 1px solid $color-disabled;
+      border: 1px solid var(--color-disabled);
     }
   }
 
@@ -106,14 +106,14 @@ const clearInput = () => {
     height: 100%;
     background: transparent;
     outline: 0;
-    color: $color-text;
+    color: var(--color-text);
     border: 1px solid transparent;
     border-radius: 5px;
     padding: 0 12px;
     transition: all 0.2s;
 
     &:focus-visible {
-      outline: 1px solid $color-primary;
+      outline: 1px solid var(--color-primary);
     }
 
     &:disabled {

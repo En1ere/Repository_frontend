@@ -42,9 +42,9 @@ const settingsHandler = () => {}
     background: #7a1743;
 
     &__logo {
-      color: $color-text;
+      color: var(--color-text);
       &:first-letter {
-        color: $color-primary;
+        color: var(--color-primary);
       }
     }
   }

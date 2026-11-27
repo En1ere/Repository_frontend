@@ -1,0 +1,27 @@
+@use "primitives" as p;
+
+:root {
+  color-scheme: light;
+
+  --color-text-dark: #{p.$light-color-text-dark};
+  --color-text: #{p.$light-color-text-dark};
+
+  --color-background-logo: #{p.$light-color-background-logo};
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+
+  --color-text-light: #{p.$dark-color-text-light};
+  --color-text-gray: #{p.$dark-color-text-gray};
+  --color-label: #{p.$dark-color-label};
+  --color-text: #{p.$dark-color-text-light};
+
+  --color-disabled: #{p.$dark-color-disabled};
+  --color-border: #{p.$dark-color-border};
+
+  --color-background-logo: #{p.$dark-color-background-logo};
+  --color-background-input: #{p.$dark-color-background-input};
+  --color-background-dark: #{p.$dark-color-background-dark};
+  --color-background-light: #{p.$dark-color-background-light};
+}
